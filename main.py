@@ -21,7 +21,7 @@
 
 # print(arr)
 
-arr2 = [234, 51, 123, 5, 12, 5, 12312, 6, 6, 1231]
+arr2 = [234, 51, 123, 5, 12, 5, 8, 12312, 6, 1231]
 
 def merge_sort(arr):
     # check to make sure list has elements to sort
@@ -51,11 +51,25 @@ def merge_sort(arr):
                 left_count += 1
             else:
                 arr[main_count] = right_side[right_count]
+                right_count += 1
             
             # once check has run, increment main count
             main_count += 1
-            
+
+        # check for final vals on left side
+        while left_count < len(left_side):
+            arr[main_count] = left_side[left_count]
+            left_count += 1
+            main_count += 1
+
+        # check for final vals on right side
+        while right_count < len(right_side):
+            arr[main_count] = right_side[right_count]
+            right_count += 1
+            main_count += 1
+
 merge_sort(arr2)
+print(arr2)
 
 
 
