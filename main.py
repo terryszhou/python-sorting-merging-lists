@@ -1,3 +1,7 @@
+'''
+https://www.geeksforgeeks.org/merge-sort/
+'''
+
 # arr = [1, 3, 56234, 123, 6, 63, 1, 3423, 6234, 4, 1, 4, 6, 234234, 12, 63, 22141, 345, 238, 34582, 34958, 1248, 3458, 1282]
 
 # for indx, elem in enumerate(arr):
@@ -68,8 +72,8 @@ def merge_sort(arr):
             right_count += 1
             main_count += 1
 
-merge_sort(arr2)
-print(arr2)
+def print_list(arr):
+    merge_sort(arr)
+    return arr
 
-
-
+print(print_list(arr2))
